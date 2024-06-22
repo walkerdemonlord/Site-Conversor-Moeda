@@ -1,11 +1,11 @@
 
-var real = window.document.getElementById('valor-real');
-var dolar = window.document.getElementById('valor-dolar');
-
-const cotação = 5.41;
-
 real.addEventListener('Input', converterParaDolar);
 dolar.addEventListener('Input', converterParaReal);
+
+var real = parseFloat(window.document.getElementById('valor-real'));
+var dolar = parseFloat(window.document.getElementById('valor-dolar'));
+
+const cotação = 5.41;
 
 resultado.InnerHTML = '${resultado}';
 
