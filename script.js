@@ -4,8 +4,8 @@ var dolar = window.document.getElementById('valor-dolar');
 
 const cotação = 5.41;
 
-real.addEventListener('InputEvent', converterParaDolar);
-dolar.addEventListener('InputEvent', converterParaReal);
+real.addEventListener('Input', converterParaDolar);
+dolar.addEventListener('Input', converterParaReal);
 
 resultado.InnerHTML = '${resultado}';
 
