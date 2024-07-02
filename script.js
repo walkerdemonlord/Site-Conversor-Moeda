@@ -1,20 +1,20 @@
+document.addEventListener('DOMContentLoaded', function () {
+    var real = document.getElementById('valor-real');
+    var dolar = document.getElementById('valor-dolar');
+    const cotacao = 5.41;
 
-real.addEventListener('Input', converterParaDolar);
-dolar.addEventListener('Input', converterParaReal);
+    real.addEventListener('input', converterParaDolar);
+    dolar.addEventListener('input', converterParaReal);
 
-var real = parseFloat(window.document.getElementById('valor-real'));
-var dolar = parseFloat(window.document.getElementById('valor-dolar'));
+    function converterParaReal() {
+        let valorDolar = parseFloat(dolar.value);
+        let resultado = valorDolar * cotacao;
+        document.querySelector('.resultado').innerHTML = `R$ ${resultado.toFixed(2)}`;
+    }
 
-const cotação = 5.41;
-
-resultado.InnerHTML = '${resultado}';
-
-function converterParaReal() {
-    let resultado = dolar * cotação;
-    return resultado;
-}
-
-function converterParaDolar() {
-    let resultado = real / cotação;
-    return resultado;
-}
+    function converterParaDolar() {
+        let valorReal = parseFloat(real.value);
+        let resultado = valorReal / cotacao;
+        document.querySelector('.resultado').innerHTML = `$ ${resultado.toFixed(2)}`;
+    }
+});
